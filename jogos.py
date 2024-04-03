@@ -1,12 +1,10 @@
 import adivinhacao
-import termo
+import forca
 
-jogo = int(input("1 - adivinhação 2 - termo \n"))
+jogo = int(input("1 - ADIVINHAÇÃO 2 - FORCA \n"))
 
 
 if jogo == 1 :
-    print("executando adivinhacao")
     adivinhacao.jogar()
 else :
-    print("Executando termo")
-    termo.jogar()
+    forca.jogar()

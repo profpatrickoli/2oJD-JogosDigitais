@@ -1,7 +1,12 @@
 import random
 def jogar() :
-    palavras = ("estrela", "cafe", "balacobaco")
+    palavras = []
+    arquivo = open("frutas.txt", "r")
+    for linha in arquivo:
+        palavras.append(linha.strip())
     palavra_secreta = random.choice(palavras)
+    #print(palavras)
+
     print("###### Bem vindo ao jogo da FORCA ######")
     letras_acertadas = []
     for letra in palavra_secreta:
@@ -34,7 +39,6 @@ def jogar() :
             enforcou = True
             print(letras_acertadas)
             print("A palavra correta era", palavra_secreta)
-    ## PROGRAMAÇÃO CRIADA
     print("##### FIM DO JOGO #####")
 
 
